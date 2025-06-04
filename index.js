@@ -15,7 +15,9 @@ require('dotenv').config();
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017', {
+const MONGOURI = process.env.MONGOURI;
+
+mongoose.connect(MONGOURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
