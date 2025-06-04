@@ -23,8 +23,9 @@ A RESTful API for managing users, books, and reviews with authentication using J
 git clone https://github.com/raj1199/Book-Review-app.git
 cd Book-Review-app
 
+---
 
-📦 Example API Requests (cURL / Postman)
+## Example API Requests (cURL / Postman)
 🔐 Signup
 
 curl --location 'http://localhost:3000/signup' \
@@ -98,7 +99,28 @@ Schema Design
 
 Book schema
 
+{
+    title: String,
+    author: String,
+    genre: String,
+    userIds: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+}
 
+User schema
+
+{
+    username: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+}
+
+Review schema
+
+{
+    userId: { type: Schema.Types.ObjectId, ref: 'User' },
+    bookId: { type: Schema.Types.ObjectId, ref: 'Book' },
+    rating: Number,
+    comment: String,
+}
 
 
 
