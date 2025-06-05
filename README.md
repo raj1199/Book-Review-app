@@ -118,10 +118,10 @@ curl --location --request DELETE 'http://localhost:3000/reviews/:id' \
 curl --location 'http://localhost:3000/search?q=pragmatic'
 
 
-Schema Design
+### Schema Design
 
 
-Book schema
+1. Book schema
 
 {
     title: String,
@@ -130,14 +130,14 @@ Book schema
     userIds: [{ type: Schema.Types.ObjectId, ref: 'User' }],
 }
 
-User schema
+2. User schema
 
 {
     username: { type: String, required: true, unique: true },
     password: { type: String, required: true },
 }
 
-Review schema
+3. Review schema
 
 {
     userId: { type: Schema.Types.ObjectId, ref: 'User' },
