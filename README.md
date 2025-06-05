@@ -25,6 +25,26 @@ cd Book-Review-app
 
 ---
 
+### 2. Install Dependencies
+
+npm install
+
+---
+
+### 3. Configure Environment Variables
+
+JWT_SECRET=pE3@7Rb!*nqZ5L&mF^xKdY!03wVp$gHu2Tz#
+MONGOURI='mongodb://localhost:27017'
+
+---
+
+
+### 4. Run the Server
+
+node index.js
+
+-----
+
 ## Example API Requests (cURL / Postman)
 🔐 Signup
 
