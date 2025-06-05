@@ -25,8 +25,12 @@ cd Book-Review-app
 
 ---
 
-### 2. Install Dependencies
 
+## 2. Install Dependencies
+
+Run the following command to install all dependencies:
+
+```bash
 npm install
 
 ---
